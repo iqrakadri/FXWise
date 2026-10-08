@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_minimal">
+
+    <LinearLayout
+        android:id="@+id/splashContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp">
+
+        <!-- FXWise Logo -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="320dp"
+            android:layout_height="220dp"
+            android:src="@drawable/fxwise_logo"
+            android:scaleType="fitCenter"
+            android:contentDescription="FXWise logo" />
+
+        <!-- Subtle Gold Accent -->
+        <View
+            android:layout_width="42dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="2dp"
+            android:background="#D9A928" />
+
+        <!-- Tagline -->
+        <TextView
+            android:id="@+id/tvTagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Smarter Transfers. Lower Costs."
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:fontFamily="@font/inter_variable"
+            android:letterSpacing="0.025"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+</FrameLayout>

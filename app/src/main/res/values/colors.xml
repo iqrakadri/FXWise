@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="fx_background">#F8F6F1</color>
+    <color name="fx_jade">#AEB8A0</color>
+    <color name="fx_jade_dark">#687561</color>
+
+    <color name="fx_sage_soft">#DCE8D7</color>
+    <color name="fx_lavender">#DDD5EA</color>
+    <color name="fx_blush">#F1DCE1</color>
+
+    <color name="fx_warning">#E8B98A</color>
+
+    <color name="fx_white">#FFFFFF</color>
+    <color name="fx_text">#20241F</color>
+    <color name="fx_muted">#777E75</color>
+    <color name="fx_border">#E5E3DA</color>
+
+    <color name="fx_success">#4E7A62</color>
+    <color name="fx_error">#B86B72</color>
+
+</resources>

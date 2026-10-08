@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B1020">
+
+    <!-- ================================================= -->
+    <!-- SCROLLABLE CONTENT -->
+    <!-- ================================================= -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:paddingTop="82dp"
+            android:paddingBottom="40dp">
+
+            <!-- ================================================= -->
+            <!-- HEADER -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_variable"
+                android:text="Actual vs Promised"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter_variable"
+                android:lineSpacingExtra="2dp"
+                android:text="Record what you were promised and compare it with what you actually received."
+                android:textColor="#AAB6CC"
+                android:textSize="14sp" />
+
+            <!-- ================================================= -->
+            <!-- INTRO CARD -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/bg_home_hero"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="TRANSACTION REPORT"
+                    android:textColor="#DDE9FF"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="Help FXWise understand the difference between quoted and received value."
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:lineSpacingExtra="2dp"
+                    android:text="Your report becomes part of the community transparency layer."
+                    android:textColor="#D8E3F5"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <!-- ================================================= -->
+            <!-- TRANSFER DETAILS -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/bg_compare_card_dark"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="TRANSFER DETAILS"
+                    android:textColor="#6FA8FF"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <!-- Sending Country -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="Sending from"
+                    android:textColor="#AAB6CC"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnFromCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_report_input"
+                    android:backgroundTint="@null"
+                    android:fontFamily="@font/inter_variable"
+                    android:gravity="center_vertical|start"
+                    android:minHeight="0dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="Select sending country"
+                    android:textAllCaps="false"
+                    android:textColor="#17213A"
+                    android:textSize="14sp" />
+
+                <!-- Sending Currency -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="Sending currency"
+                    android:textColor="#AAB6CC"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvFromCurrency"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_compare_card_dark"
+                    android:fontFamily="@font/inter_variable"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="Select sending country first"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <!-- Receiving Country -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="Receiving in"
+                    android:textColor="#AAB6CC"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnToCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_report_input"
+                    android:backgroundTint="@null"
+                    android:fontFamily="@font/inter_variable"
+                    android:gravity="center_vertical|start"
+                    android:minHeight="0dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="Select receiving country"
+                    android:textAllCaps="false"
+                    android:textColor="#17213A"
+                    android:textSize="14sp" />
+
+                <!-- Receiving Currency -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="Receiving currency"
+                    android:textColor="#AAB6CC"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvToCurrency"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_compare_card_dark"
+                    android:fontFamily="@font/inter_variable"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="Select receiving country first"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!-- ================================================= -->
+            <!-- TRANSACTION VALUES -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_compare_card_dark"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="TRANSACTION VALUES"
+                    android:textColor="#6FA8FF"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <!-- Provider -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="Provider"
+                    android:textColor="#AAB6CC"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerProvider"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_report_input"
+                    android:fontFamily="@font/inter_variable"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:spinnerMode="dropdown" />
+
+                <!-- Amount Sent -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="Amount sent"
+                    android:textColor="#AAB6CC"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/etAmountSent"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_report_input"
+                    android:fontFamily="@font/inter_variable"
+                    android:hint="Example: 500"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="#17213A"
+                    android:textColorHint="#61728A"
+                    android:textSize="14sp" />
+
+                <!-- Promised Rate -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="Promised exchange rate"
+                    android:textColor="#AAB6CC"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/etPromisedRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_report_input"
+                    android:fontFamily="@font/inter_variable"
+                    android:hint="Example: 88.00"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="#17213A"
+                    android:textColorHint="#61728A"
+                    android:textSize="14sp" />
+
+                <!-- Actual Received -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="Actual amount received"
+                    android:textColor="#AAB6CC"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/etActualReceived"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_report_input"
+                    android:fontFamily="@font/inter_variable"
+                    android:hint="Example: 43500"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="#17213A"
+                    android:textColorHint="#61728A"
+                    android:textSize="14sp" />
+
+                <!-- Extra Fee -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="Extra / intermediary fee"
+                    android:textColor="#AAB6CC"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/etExtraFee"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_report_input"
+                    android:fontFamily="@font/inter_variable"
+                    android:hint="Example: 500"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="#17213A"
+                    android:textColorHint="#61728A"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!-- ================================================= -->
+            <!-- TRANSACTION CONTEXT -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_compare_card_dark"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="TRANSACTION CONTEXT"
+                    android:textColor="#6FA8FF"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <!-- Transaction Date -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="Transaction date"
+                    android:textColor="#AAB6CC"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnTransactionDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_report_input"
+                    android:backgroundTint="@null"
+                    android:fontFamily="@font/inter_variable"
+                    android:gravity="center_vertical|start"
+                    android:minHeight="0dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="Select transaction date"
+                    android:textAllCaps="false"
+                    android:textColor="#17213A"
+                    android:textSize="14sp" />
+
+                <!-- Receiving Method -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="Receiving method"
+                    android:textColor="#AAB6CC"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerReceivingMethod"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_report_input"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp" />
+
+                <!-- Receiving Institution -->
+
+                <LinearLayout
+                    android:id="@+id/receivingInstitutionContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvReceivingInstitutionLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_variable"
+                        android:text="Receiving bank"
+                        android:textColor="#AAB6CC"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/etReceivingInstitution"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/bg_report_input"
+                        android:fontFamily="@font/inter_variable"
+                        android:hint="Enter receiving bank"
+                        android:inputType="textCapWords"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:textColor="#17213A"
+                        android:textColorHint="#61728A"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <!-- Rate Source -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="Where was the promised rate shown?"
+                    android:textColor="#AAB6CC"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerRateSource"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_report_input"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp" />
+
+            </LinearLayout>
+
+            <!-- ================================================= -->
+            <!-- TRANSACTION EVIDENCE -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_compare_card_dark"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="TRANSACTION EVIDENCE"
+                    android:textColor="#6FA8FF"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:lineSpacingExtra="2dp"
+                    android:text="Evidence is optional. Adding a receipt or screenshot can help support your report."
+                    android:textColor="#AAB6CC"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/btnUploadEvidence"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="#4D8DFF"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="Upload transaction evidence"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnRemoveEvidence"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Remove Evidence"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvEvidenceStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="Evidence status: Not uploaded"
+                    android:textColor="#AAB6CC"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvVerificationStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="Verification status: Unverified"
+                    android:textColor="#AAB6CC"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <!-- ================================================= -->
+            <!-- CALCULATE -->
+            <!-- ================================================= -->
+
+            <Button
+                android:id="@+id/btnCalculate"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="18dp"
+                android:backgroundTint="#4D8DFF"
+                android:fontFamily="@font/inter_variable"
+                android:text="Calculate difference"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!-- ================================================= -->
+            <!-- RESULT CARD -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:id="@+id/resultCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/bg_actual_result"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="REPORT RESULT"
+                    android:textColor="#6FA8FF"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvPromisedAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="Promised amount: 0.00"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvActualAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="Actually received: 0.00"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDifference"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="Difference: 0.00"
+                    android:textColor="#FFB4B4"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvReferenceRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="Reference FX rate: Loading..."
+                    android:textColor="#AAB6CC"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvRateDifference"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="Potential rate difference: 0.00"
+                    android:textColor="#AAB6CC"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvExtraFeeResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="Extra / intermediary fee: 0.00"
+                    android:textColor="#AAB6CC"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <!-- ================================================= -->
+            <!-- WHY THIS MATTERS -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="#11182B"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="Why this matters"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:lineSpacingExtra="2dp"
+                    android:text="Your report helps build a real-world picture of transfer costs, exchange-rate differences and the amount recipients actually receive."
+                    android:textColor="#AAB6CC"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <!-- ================================================= -->
+            <!-- SUBMIT -->
+            <!-- ================================================= -->
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="18dp"
+                android:backgroundTint="#172B5A"
+                android:fontFamily="@font/inter_variable"
+                android:text="Submit community report"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!-- ================================================= -->
+            <!-- DISCLAIMER -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/inter_variable"
+                android:gravity="center"
+                android:lineSpacingExtra="2dp"
+                android:text="Reports are informational and may require verification."
+                android:textColor="#697790"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- ================================================= -->
+    <!-- FIXED TOP BAR -->
+    <!-- ================================================= -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_gravity="top"
+        android:background="#0B1020"
+        android:elevation="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:backgroundTint="#172B5A"
+            android:fontFamily="@font/inter_variable"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_variable"
+            android:text="FXWise"
+            android:textColor="#6FA8FF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B1020"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="18dp"
+        android:paddingTop="22dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="38dp">
+
+        <!-- HEADER -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#17213A"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="Back"
+                android:textAllCaps="false"
+                android:textColor="#BFD2F7"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="FXWise"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+        </LinearLayout>
+
+
+        <!-- TITLE -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Your transfer options"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/inter_variable" />
+
+        <TextView
+            android:id="@+id/tvRoute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="United States to India"
+            android:textColor="#AEB8D0"
+            android:textSize="13sp"
+            android:fontFamily="@font/inter_variable" />
+
+
+        <!-- PRIORITY INSIGHT -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_result_info"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="YOUR PRIORITY"
+                android:textColor="#6FA3FF"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvPriority"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Lowest overall cost"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvWhy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Comparison is focused on total known transfer cost."
+                android:textColor="#9AA8C2"
+                android:textSize="12sp"
+                android:lineSpacingExtra="2dp"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvBestMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="Best match: Provider A"
+                android:textColor="#6FA3FF"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+        </LinearLayout>
+
+
+        <!-- HERO SUMMARY -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_result_hero"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RECIPIENT RECEIVES"
+                android:textColor="#C9D9FF"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvHeroAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="INR 41,000"
+                android:textColor="#FFFFFF"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvReferenceRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Reference FX rate"
+                android:textColor="#D6E2FF"
+                android:textSize="12sp"
+                android:fontFamily="@font/inter_variable" />
+
+        </LinearLayout>
+
+
+        <!-- TRUE COST -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="TRUE COST"
+            android:textColor="#6FA3FF"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/inter_variable" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_result_card"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Transfer fee"
+                    android:textColor="#9AA8C2"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter_variable" />
+
+                <TextView
+                    android:id="@+id/tvFee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="USD 5.00"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/inter_variable" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="FX impact"
+                    android:textColor="#9AA8C2"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter_variable" />
+
+                <TextView
+                    android:id="@+id/tvFxImpact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="INR 500.00"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/inter_variable" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Total known cost"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/inter_variable" />
+
+                <TextView
+                    android:id="@+id/tvTotalCost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="USD 15.00"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/inter_variable" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Possible additional charges"
+                android:textColor="#9AA8C2"
+                android:textSize="12sp"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvAdditionalCharges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="May apply depending on the route."
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:lineSpacingExtra="1dp"
+                android:fontFamily="@font/inter_variable" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="#25324C" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Recipient receives"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/inter_variable" />
+
+                <TextView
+                    android:id="@+id/tvReceive1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="INR 41,000"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/inter_variable" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- TRANSFER OPTIONS -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="TRANSFER OPTIONS"
+            android:textColor="#6FA3FF"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/inter_variable" />
+
+
+        <!-- PROVIDER 1 -->
+
+        <LinearLayout
+            android:id="@+id/cardProvider1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_provider_1"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tvProvider1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wise"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Recommended match"
+                android:textColor="#7FAAFF"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvReceiveProvider1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="Recipient receives"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvFeeProvider1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="Transfer fee"
+                android:textColor="#AAB6CC"
+                android:textSize="12sp"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvTotalCostProvider1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Total known cost"
+                android:textColor="#AAB6CC"
+                android:textSize="12sp"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvSpeed1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="1-2 days"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Estimated transfer speed"
+                android:textColor="#66738D"
+                android:textSize="9sp"
+                android:fontFamily="@font/inter_variable" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="#344866" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="COMMUNITY DATA"
+                android:textColor="#AFAEFF"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvCommunity1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="No community data yet"
+                android:textColor="#AAB6CC"
+                android:textSize="11sp"
+                android:lineSpacingExtra="2dp"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvHealth1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Cost Health Score: 0/100"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvHiddenWarning1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_warning_card"
+                android:padding="14dp"
+                android:text="Checking additional charges..."
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:lineSpacingExtra="2dp"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvPromo1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_promo_card"
+                android:padding="17dp"
+                android:text="PROMO CHECK&#10;Checking promotional pricing..."
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:lineSpacingExtra="3dp"
+                android:fontFamily="@font/inter_variable" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Prototype comparison estimate"
+                android:textColor="#66738D"
+                android:textSize="9sp"
+                android:fontFamily="@font/inter_variable" />
+
+        </LinearLayout>
+
+
+        <!-- PROVIDER 2 -->
+
+        <LinearLayout
+            android:id="@+id/cardProvider2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_provider_2"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tvProvider2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Remitly"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Alternative"
+                android:textColor="#8FA5C8"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvReceive2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="Recipient receives"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvFeeProvider2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="Transfer fee"
+                android:textColor="#AAB6CC"
+                android:textSize="12sp"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvTotalCostProvider2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Total known cost"
+                android:textColor="#AAB6CC"
+                android:textSize="12sp"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvSpeed2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Minutes"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Estimated transfer speed"
+                android:textColor="#66738D"
+                android:textSize="9sp"
+                android:fontFamily="@font/inter_variable" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="#25324C" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="COMMUNITY DATA"
+                android:textColor="#AFAEFF"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvCommunity2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="No community data yet"
+                android:textColor="#AAB6CC"
+                android:textSize="11sp"
+                android:lineSpacingExtra="2dp"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvHealth2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Cost Health Score: 0/100"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvHiddenWarning2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_warning_card"
+                android:padding="14dp"
+                android:text="Checking additional charges..."
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:lineSpacingExtra="2dp"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvPromo2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_promo_card"
+                android:padding="17dp"
+                android:text="PROMO CHECK&#10;Checking promotional pricing..."
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:lineSpacingExtra="3dp"
+                android:fontFamily="@font/inter_variable" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Prototype comparison estimate"
+                android:textColor="#66738D"
+                android:textSize="9sp"
+                android:fontFamily="@font/inter_variable" />
+
+        </LinearLayout>
+
+
+        <!-- PROVIDER 3 -->
+
+        <LinearLayout
+            android:id="@+id/cardProvider3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_provider_3"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tvProvider3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Western Union"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Comparison"
+                android:textColor="#7D8BA6"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvReceive3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="Recipient receives"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvFeeProvider3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="Transfer fee"
+                android:textColor="#AAB6CC"
+                android:textSize="12sp"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvTotalCostProvider3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Total known cost"
+                android:textColor="#AAB6CC"
+                android:textSize="12sp"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvSpeed3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="1 day"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Estimated transfer speed"
+                android:textColor="#66738D"
+                android:textSize="9sp"
+                android:fontFamily="@font/inter_variable" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="#25324C" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="COMMUNITY DATA"
+                android:textColor="#AFAEFF"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvCommunity3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="No community data yet"
+                android:textColor="#AAB6CC"
+                android:textSize="11sp"
+                android:lineSpacingExtra="2dp"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvHealth3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Cost Health Score: 0/100"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvHiddenWarning3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_warning_card"
+                android:padding="14dp"
+                android:text="Checking additional charges..."
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:lineSpacingExtra="2dp"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvPromo3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_promo_card"
+                android:padding="17dp"
+                android:text="PROMO CHECK&#10;Checking promotional pricing..."
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:lineSpacingExtra="3dp"
+                android:fontFamily="@font/inter_variable" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Prototype comparison estimate"
+                android:textColor="#66738D"
+                android:textSize="9sp"
+                android:fontFamily="@font/inter_variable" />
+            <Button
+                android:id="@+id/btnWhatIf"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="18dp"
+                android:text="Try What-If Simulator"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_primary_button" />
+
+        </LinearLayout>
+
+
+        <!-- CHECK BEFORE SENDING -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_result_info"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Check before sending"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variable" />
+
+            <TextView
+                android:id="@+id/tvWarning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Receiving-bank or intermediary charges may apply depending on the route."
+                android:textColor="#9AA8C2"
+                android:textSize="12sp"
+                android:lineSpacingExtra="2dp"
+                android:fontFamily="@font/inter_variable" />
+
+        </LinearLayout>
+
+
+        <!-- DISCLAIMER -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:text="Reference rates and provider values are informational prototype estimates. Always verify the final quote before sending."
+            android:textColor="#66738D"
+            android:textSize="10sp"
+            android:lineSpacingExtra="2dp"
+            android:fontFamily="@font/inter_variable" />
+
+    </LinearLayout>
+
+</ScrollView>
